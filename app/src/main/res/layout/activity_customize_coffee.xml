@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_customize_coffee.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvCoffeeName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- ขนาดแก้ว -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="เลือกขนาด"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/rgSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <RadioButton
+            android:id="@+id/rbSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="เล็ก"/>
+
+        <RadioButton
+            android:id="@+id/rbMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="กลาง"
+            android:layout_marginHorizontal="16dp"/>
+
+        <RadioButton
+            android:id="@+id/rbLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ใหญ่"/>
+    </RadioGroup>
+
+    <!-- ระดับความหวาน -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ระดับความหวาน"
+        android:textStyle="bold"/>
+
+    <SeekBar
+        android:id="@+id/sbSweetness"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="100"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- จำนวน Shot -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="เพิ่ม Shot กาแฟ"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <ImageButton
+            android:id="@+id/btnDecreaseShot"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_media_previous"
+            android:contentDescription="ลด"/>
+
+        <TextView
+            android:id="@+id/tvShotCount"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textAlignment="center"
+            android:textSize="18sp"/>
+
+        <ImageButton
+            android:id="@+id/btnIncreaseShot"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_media_next"
+            android:contentDescription="เพิ่ม"/>
+    </LinearLayout>
+
+    <!-- คำสั่งพิเศษ -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="คำสั่งพิเศษ"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/etSpecialInstructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="เพิ่มคำสั่งพิเศษ..."
+        android:layout_marginBottom="16dp"/>
+
+    <!-- ราคารวม -->
+    <TextView
+        android:id="@+id/tvTotalPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="end"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnAddToCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="เพิ่มลงตะกร้า"/>
+
+</LinearLayout>
